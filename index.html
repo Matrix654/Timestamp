@@ -2,16 +2,12 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Timestamp</title>
+  <title>Timestamp JSON</title>
 </head>
 <body>
   <script>
-    const timestamp = 1750333039;
-    const date = new Date(timestamp * 1000);
-    const json = {
-      timestamp: timestamp,
-      readable: date.toISOString()
-    };
+    const timestamp = Math.floor(Date.now() / 1000);
+    const json = { timestamp: timestamp };
     document.body.textContent = JSON.stringify(json);
   </script>
 </body>
